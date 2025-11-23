@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<!-- NAVBAR -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Info – Momentum Games</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- GLOBAL STYLES (NAVBAR + ANIMATIONS + FOOTER) -->
 <style>
+/* NAVBAR */
 nav {
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba(0,0,0,0.65);
+    background: rgba(0,0,0,0.85);
     backdrop-filter: blur(8px);
     padding: 15px 30px;
     display: flex;
@@ -15,7 +22,6 @@ nav {
     z-index: 1000;
     border-bottom: 1px solid rgba(0,255,255,0.3);
 }
-
 nav a {
     color: cyan;
     text-decoration: none;
@@ -25,105 +31,52 @@ nav a {
     transition: 0.25s;
     text-shadow: 0 0 10px rgba(0,255,255,0.6);
 }
-
 nav a:hover {
     color: white;
     transform: scale(1.08);
     text-shadow: 0 0 18px cyan;
 }
-</style>
 
-<nav>
-    <a href="index.html">Home</a>
-    <a href="info.html">Info</a>
-    <a href="ourteam.html">Our Team</a>
-    <a href="games.html">Games</a>
-    <a href="https://www.roblox.com/communities/35673180/Momentum-Games-Official#!/about">Roblox</a>
-    <a href="https://discord.gg/mDYMJKdZ">Discord</a>
-</nav>
+/* Fade + Slide animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeSlideUp 1.2s ease forwards;
+}
+@keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
 
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Document Viewer</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+body {
+    margin: 0;
+    padding: 0;
+    background: #111;
+    font-family: 'Inter', Arial, sans-serif;
+    color: white;
+}
 
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        background: #111;
-        font-family: Arial, sans-serif;
-        text-align: center;
-        color: white;
-    }
+.page-container {
+    max-width: 1000px;
+    margin: 140px auto 40px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: black;
+    box-shadow: 0 0 20px rgba(0,255,255,0.25);
+}
+.page-container img {
+    width: 100%;
+    display: block;
+}
 
-    h2 {
-        margin-top: 40px;
-        font-size: 28px;
-        color: cyan;
-        font-weight: 700;
-    }
-
-    .page-container {
-        max-width: 1000px;
-        margin: 20px auto;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 0 20px rgba(0,0,0,0.5);
-        background: black;
-    }
-
-    img {
-        width: 100%;
-        display: block;
-    }
-</style>
-
-</head>
-<body>
-
-<
-<div class="page-container">
-    <img src="page_1.png" alt="Page 1">
-</div>
-
-
-<div class="page-container">
-    <img src="page_2.png" alt="Page 2">
-</div>
-
-<div class="page-container">
-    <img src="page_3.png" alt="Page 3">
-</div>
-
-
-<div class="page-container">
-    <img src="page_4.png" alt="Page 4">
-</div>
-
-
-<div class="page-container">
-    <img src="page_5.png" alt="Page 5">
-</div>
-
-
-<div class="page-container">
-    <img src="page_6.png" alt="Page 6">
-</div>
-
-</body>
-</html>
-<!-- FOOTER -->
-<style>
+/* Footer */
 footer {
-    margin-top: 80px;
+    margin-top: 60px;
     padding: 30px;
     text-align: center;
     color: #bbb;
     font-size: 16px;
     border-top: 1px solid rgba(0,255,255,0.25);
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.6);
     backdrop-filter: blur(6px);
 }
 footer a {
@@ -134,9 +87,34 @@ footer a:hover {
     text-shadow: 0 0 10px cyan;
 }
 </style>
+</head>
 
+<body>
+
+<!-- NAVBAR -->
+<nav>
+    <a href="index.html">Home</a>
+    <a href="info.html">Info</a>
+    <a href="ourteam.html">Our Team</a>
+    <a href="games.html">Games</a>
+    <a href="https://www.roblox.com/communities/35673180/Momentum-Games-Official#!/about">Roblox</a>
+    <a href="https://discord.gg/mDYMJKdZ">Discord</a>
+</nav>
+
+<!-- PDF PAGES -->
+<div class="page-container fade-in"><img src="page_1.png"></div>
+<div class="page-container fade-in"><img src="page_2.png"></div>
+<div class="page-container fade-in"><img src="page_3.png"></div>
+<div class="page-container fade-in"><img src="page_4.png"></div>
+<div class="page-container fade-in"><img src="page_5.png"></div>
+<div class="page-container fade-in"><img src="page_6.png"></div>
+
+<!-- FOOTER -->
 <footer>
     © 2025 Momentum Games • 
     <a href="https://www.roblox.com/communities/35673180/Momentum-Games-Official#!/about">Roblox Group</a> • 
     <a href="https://discord.gg/mDYMJKdZ">Discord</a>
 </footer>
+
+</body>
+</html>
