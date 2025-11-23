@@ -1,16 +1,99 @@
-<a href="info.html" class="btn">Info!</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Momentum Games</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-.btn {
-    display: inline-block;
-    padding: 12px 20px;
-    background: #2563eb;
-    color: white;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-}
-.btn:hover {
-    background: #1d4ed8;
-}
+    /* Full-page background */
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow: hidden;
+        background: url("page_1.png") no-repeat center center fixed;
+        background-size: cover;
+        font-family: "Inter", Arial, sans-serif;
+    }
+
+    /* Dark gradient overlay for readability */
+    .overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+            rgba(0,0,0,0.6),
+            rgba(0,0,0,0.75)
+        );
+    }
+
+    /* Centered content */
+    .content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: white;
+        width: 90%;
+        max-width: 800px;
+        padding: 20px;
+    }
+
+    /* Title */
+    h1 {
+        font-size: 60px;
+        margin-bottom: 10px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-shadow: 0 0 18px rgba(0,255,255,0.6);
+        color: cyan;
+    }
+
+    /* Description */
+    p {
+        font-size: 20px;
+        line-height: 1.6;
+        margin-bottom: 35px;
+        color: #e2e8f0;
+        text-shadow: 0 0 12px rgba(0,0,0,0.9);
+    }
+
+    /* Button */
+    .btn {
+        display: inline-block;
+        padding: 14px 28px;
+        background: linear-gradient(135deg, #2563eb, #3b82f6);
+        color: white;
+        text-decoration: none;
+        border-radius: 10px;
+        font-size: 20px;
+        font-weight: bold;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+        transition: 0.2s ease-in-out;
+    }
+    .btn:hover {
+        transform: scale(1.06);
+        background: linear-gradient(135deg, #1d4ed8, #2563eb);
+        box-shadow: 0 0 18px rgba(0,102,255,0.7);
+    }
 </style>
+
+</head>
+
+<body>
+
+<div class="overlay"></div>
+
+<div class="content">
+    <h1>Momentum Games</h1>
+    <p>
+     Momentum Games is a group of Roblox creators who just love making fun and unique games for everyone. We’re always coming up with new ideas, building cool worlds, and making sure you have a blast playing together. If you like exploring, competing, or just hanging out in awesome games, Momentum Games is all about giving you great experiences and good vibes. Come join us and let’s have some fun!
+    </p>
+
+    <a href="info.html" class="btn">Info!</a>
+</div>
+
+</body>
+</html>
+
