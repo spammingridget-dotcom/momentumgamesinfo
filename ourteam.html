@@ -1,12 +1,18 @@
 <!DOCTYPE html>
-<!-- NAVBAR -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Our Team – Momentum Games</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
+/* NAVBAR */
 nav {
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba(0,0,0,0.65);
+    background: rgba(0,0,0,0.85);
     backdrop-filter: blur(8px);
     padding: 15px 30px;
     display: flex;
@@ -15,7 +21,6 @@ nav {
     z-index: 1000;
     border-bottom: 1px solid rgba(0,255,255,0.3);
 }
-
 nav a {
     color: cyan;
     text-decoration: none;
@@ -25,14 +30,111 @@ nav a {
     transition: 0.25s;
     text-shadow: 0 0 10px rgba(0,255,255,0.6);
 }
-
 nav a:hover {
     color: white;
     transform: scale(1.08);
     text-shadow: 0 0 18px cyan;
 }
-</style>
 
+/* Fade + Slide animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeSlideUp 1.2s ease forwards;
+}
+@keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #111;
+    font-family: "Inter", Arial, sans-serif;
+    color: white;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 140px 20px 40px;
+}
+.header h1 {
+    font-size: 48px;
+    margin: 0;
+    color: cyan;
+    text-shadow: 0 0 12px rgba(0,255,255,0.6);
+}
+
+/* Sections */
+.section {
+    margin: 40px auto;
+    max-width: 1100px;
+    padding: 0 20px;
+}
+.section h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #00e5ff;
+    border-left: 6px solid #00e5ff;
+    padding-left: 12px;
+}
+
+/* Team cards */
+.team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: flex-start;
+}
+.card {
+    width: 240px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,255,255,0.25);
+    transition: 0.25s;
+}
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 25px cyan;
+}
+.name {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    color: cyan;
+}
+.role {
+    font-size: 16px;
+    color: #ccc;
+}
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    padding: 30px;
+    text-align: center;
+    color: #bbb;
+    font-size: 16px;
+    border-top: 1px solid rgba(0,255,255,0.25);
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+}
+footer a {
+    color: cyan;
+    text-decoration: none;
+}
+footer a:hover {
+    text-shadow: 0 0 10px cyan;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
 <nav>
     <a href="index.html">Home</a>
     <a href="info.html">Info</a>
@@ -42,91 +144,13 @@ nav a:hover {
     <a href="https://discord.gg/mDYMJKdZ">Discord</a>
 </nav>
 
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Our Team – Momentum Games</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        background: #111;
-        font-family: "Inter", Arial, sans-serif;
-        color: white;
-    }
-
-    .header {
-        text-align: center;
-        padding: 40px 20px;
-    }
-
-    .header h1 {
-        font-size: 48px;
-        margin: 0;
-        color: cyan;
-        text-shadow: 0 0 12px rgba(0,255,255,0.6);
-    }
-
-    .section {
-        margin: 40px auto;
-        max-width: 1100px;
-        padding: 0 20px;
-    }
-
-    .section h2 {
-        font-size: 32px;
-        margin-bottom: 20px;
-        color: #00e5ff;
-        border-left: 6px solid #00e5ff;
-        padding-left: 12px;
-    }
-
-    .team-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        justify-content: flex-start;
-    }
-
-    .card {
-        width: 240px;
-        background: #1a1a1a;
-        border-radius: 12px;
-        padding: 20px;
-        text-align: center;
-        box-shadow: 0 0 20px rgba(0,0,0,0.5);
-        transition: 0.25s;
-    }
-
-    .card:hover {
-        transform: translateY(-6px);
-        box-shadow: 0 0 25px rgba(0,255,255,0.6);
-    }
-
-    .name {
-        font-size: 22px;
-        font-weight: 700;
-        margin-bottom: 5px;
-        color: cyan;
-    }
-
-    .role {
-        font-size: 16px;
-        color: #ccc;
-    }
-</style>
-</head>
-
-<body>
-
-<div class="header">
+<!-- TEAM HEADER -->
+<div class="header fade-in">
     <h1>Our Team</h1>
 </div>
 
 <!-- Ownership Team -->
-<div class="section">
+<div class="section fade-in">
     <h2>Ownership Team</h2>
     <div class="team-grid">
         <div class="card"><div class="name">Mopy_UGC</div><div class="role">Ownership Team</div></div>
@@ -138,7 +162,7 @@ nav a:hover {
 </div>
 
 <!-- Scripters -->
-<div class="section">
+<div class="section fade-in">
     <h2>Scripters</h2>
     <div class="team-grid">
         <div class="card"><div class="name">KeaganLua</div><div class="role">Scripter</div></div>
@@ -149,7 +173,7 @@ nav a:hover {
 </div>
 
 <!-- Modelers -->
-<div class="section">
+<div class="section fade-in">
     <h2>Modelers</h2>
     <div class="team-grid">
         <div class="card"><div class="name">ChillGuy</div><div class="role">Modeler</div></div>
@@ -159,8 +183,8 @@ nav a:hover {
 </div>
 
 <!-- Builders -->
-<div class="section">
-    <h2>Builder</h2>
+<div class="section fade-in">
+    <h2>Builders</h2>
     <div class="team-grid">
         <div class="card"><div class="name">Urakding_Vegito</div><div class="role">Builder</div></div>
         <div class="card"><div class="name">ClownFish</div><div class="role">Builder</div></div>
@@ -169,7 +193,7 @@ nav a:hover {
 </div>
 
 <!-- VFX -->
-<div class="section">
+<div class="section fade-in">
     <h2>VFX</h2>
     <div class="team-grid">
         <div class="card"><div class="name">JSCaleb</div><div class="role">VFX</div></div>
@@ -177,7 +201,7 @@ nav a:hover {
 </div>
 
 <!-- Helper/Admin -->
-<div class="section">
+<div class="section fade-in">
     <h2>Helper / Admin</h2>
     <div class="team-grid">
         <div class="card"><div class="name">SkyDeadlyBeast</div><div class="role">Helper/Admin</div></div>
@@ -186,38 +210,19 @@ nav a:hover {
 </div>
 
 <!-- UI Design -->
-<div class="section">
+<div class="section fade-in">
     <h2>UI Design</h2>
     <div class="team-grid">
         <div class="card"><div class="name">Shahan</div><div class="role">UI Designer</div></div>
     </div>
 </div>
 
-</body>
-</html>
 <!-- FOOTER -->
-<style>
-footer {
-    margin-top: 80px;
-    padding: 30px;
-    text-align: center;
-    color: #bbb;
-    font-size: 16px;
-    border-top: 1px solid rgba(0,255,255,0.25);
-    background: rgba(0,0,0,0.5);
-    backdrop-filter: blur(6px);
-}
-footer a {
-    color: cyan;
-    text-decoration: none;
-}
-footer a:hover {
-    text-shadow: 0 0 10px cyan;
-}
-</style>
-
 <footer>
     © 2025 Momentum Games • 
     <a href="https://www.roblox.com/communities/35673180/Momentum-Games-Official#!/about">Roblox Group</a> • 
     <a href="https://discord.gg/mDYMJKdZ">Discord</a>
 </footer>
+
+</body>
+</html>
