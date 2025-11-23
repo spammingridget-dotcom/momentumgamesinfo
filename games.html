@@ -4,19 +4,15 @@
 <meta charset="UTF-8">
 <title>Games – Momentum Games</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
 
-<body style="background:#0c0c0c; color:white; font-family:'Inter', sans-serif;">
-
-<!-- Include navbar here -->
-  <!-- NAVBAR -->
 <style>
+/* NAVBAR */
 nav {
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
-    background: rgba(0,0,0,0.65);
+    background: rgba(0,0,0,0.85);
     backdrop-filter: blur(8px);
     padding: 15px 30px;
     display: flex;
@@ -25,7 +21,6 @@ nav {
     z-index: 1000;
     border-bottom: 1px solid rgba(0,255,255,0.3);
 }
-
 nav a {
     color: cyan;
     text-decoration: none;
@@ -35,14 +30,102 @@ nav a {
     transition: 0.25s;
     text-shadow: 0 0 10px rgba(0,255,255,0.6);
 }
-
 nav a:hover {
     color: white;
     transform: scale(1.08);
     text-shadow: 0 0 18px cyan;
 }
-</style>
 
+/* Fade + Slide Animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeSlideUp 1.2s ease forwards;
+}
+@keyframes fadeSlideUp {
+    from { opacity: 0; transform: translateY(20px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+body {
+    background: #0c0c0c;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 140px;
+    font-size: 48px;
+    color: cyan;
+    text-shadow: 0 0 14px cyan;
+}
+
+/* Game Cards */
+.game-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+}
+
+.game-card {
+    width: 300px;
+    background: #111;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,255,255,0.3);
+    transition: 0.25s;
+}
+.game-card:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 30px cyan;
+}
+.game-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.game-card a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: linear-gradient(135deg,#2563eb,#3b82f6);
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+.game-card a:hover {
+    transform: scale(1.06);
+    box-shadow: 0 0 14px cyan;
+}
+
+/* Footer */
+footer {
+    margin-top: 60px;
+    padding: 30px;
+    text-align: center;
+    color: #bbb;
+    font-size: 16px;
+    border-top: 1px solid rgba(0,255,255,0.25);
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+}
+footer a {
+    color: cyan;
+}
+footer a:hover {
+    text-shadow: 0 0 10px cyan;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
 <nav>
     <a href="index.html">Home</a>
     <a href="info.html">Info</a>
@@ -52,75 +135,22 @@ nav a:hover {
     <a href="https://discord.gg/mDYMJKdZ">Discord</a>
 </nav>
 
-  
-<!-- Include animations here -->
+<h1 class="fade-in">Our Games</h1>
 
-<h1 class="fade-in" style="text-align:center; margin-top:120px; font-size:48px; color:cyan; text-shadow:0 0 14px cyan;">
-    Our Games
-</h1>
+<div class="game-grid">
 
-<div style="
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:40px;
-    padding:40px;">
-    
-    <!-- Game CARD TEMPLATE -->
-    <div style="
-        width:300px;
-        background:#111;
-        border-radius:14px;
-        overflow:hidden;
-        box-shadow:0 0 20px rgba(0,255,255,0.3);
-        transition:0.25s;
-        cursor:pointer;" class="fade-in">
-        
-        <img src="game1.png" style="width:100%; height:180px; object-fit:cover;">
-        
+    <!-- SAMPLE CARD — Duplicate to add more games -->
+    <div class="game-card fade-in">
+        <img src="game1.png">
         <div style="padding:20px; text-align:center;">
-            <h2 style="margin:0; color:cyan; font-size:24px;">Your Game Name</h2>
-            
-            <a href="https://www.roblox.com/games/00000000" target="_blank" style="
-                display:inline-block;
-                margin-top:15px;
-                padding:10px 20px;
-                background:linear-gradient(135deg,#2563eb,#3b82f6);
-                color:white;
-                text-decoration:none;
-                border-radius:8px;
-                font-weight:600;
-                box-shadow:0 0 12px rgba(0,0,0,0.5);
-                transition:0.25s;">
-                Play on Roblox
-            </a>
+            <h2>Your Game Name</h2>
+            <a href="https://www.roblox.com/games/00000000" target="_blank">Play on Roblox</a>
         </div>
     </div>
-    
+
 </div>
 
-<!-- Include footer here -->
 <!-- FOOTER -->
-<style>
-footer {
-    margin-top: 80px;
-    padding: 30px;
-    text-align: center;
-    color: #bbb;
-    font-size: 16px;
-    border-top: 1px solid rgba(0,255,255,0.25);
-    background: rgba(0,0,0,0.5);
-    backdrop-filter: blur(6px);
-}
-footer a {
-    color: cyan;
-    text-decoration: none;
-}
-footer a:hover {
-    text-shadow: 0 0 10px cyan;
-}
-</style>
-
 <footer>
     © 2025 Momentum Games • 
     <a href="https://www.roblox.com/communities/35673180/Momentum-Games-Official#!/about">Roblox Group</a> • 
